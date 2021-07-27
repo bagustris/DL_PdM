@@ -1,6 +1,6 @@
 # Deep Learning for Predictive Maintenance
 
-This module contains the code used in our survey paper: [Deep Learning and Its Applications to Machine Health Monitoring](https://www.researchgate.net/publication/311839720_Deep_Learning_and_Its_Applications_to_Machine_Health_Monitoring_A_Survey). It has been published in [Mechanical Systems and Signal Processing](https://linkinghub.elsevier.com/retrieve/pii/S0888327018303108). This version is [my edit](https://github.com/bagustrius) to keep the code run in Python 3.6 and Tensorflow 1.15.5.
+This module contains the code used in our survey paper: [Deep Learning and Its Applications to Machine Health Monitoring](https://www.researchgate.net/publication/311839720_Deep_Learning_and_Its_Applications_to_Machine_Health_Monitoring_A_Survey). It has been published in [Mechanical Systems and Signal Processing](https://linkinghub.elsevier.com/retrieve/pii/S0888327018303108). This version is [my fork](https://github.com/bagustrius) from the [original authors](https://github.com/ClockworkBunny/MHMS_DEEPLEARNING.) to keep the code run in Python 3.6 and Tensorflow 1.15.5.
 
 ## Table of Contents
 
@@ -40,10 +40,17 @@ SVR with two kernels (linear and rbf), Random Forest, and Neural Network are pro
 ### Main Test
 To replicate the results reported in the paper (python 3.6)
 ```
-pip install -r requirement 
-python main_test.py
-python parselog.py
+# if you prefer to use virtual environment
+python3.6 -m venv venv
+source venv/bin/activate 
+pip install -r code/requirements.txt 
+# without venv you can run the following codes
+python3.6 main_test.py
+python3.6 parselog.py
 ```
+Change `python3.6` to your preferable python version. I just check it works with python3.6.
+
+
 The results will be stored in output.log. In addition, a python notebook file is provided to parse the raw log file for mean and std accuracy computation. 
 Due to randomness, we run all of these models five times. 
 
