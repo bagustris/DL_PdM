@@ -1,6 +1,6 @@
-# Deep Learning and Its Applications to Machine Health Monitoring
+# Deep Learning for Predictive Maintenance
 
-This module contains the code used in our survey paper: [Deep Learning and Its Applications to Machine Health Monitoring](https://www.researchgate.net/publication/311839720_Deep_Learning_and_Its_Applications_to_Machine_Health_Monitoring_A_Survey). It has been accepted by [Mechanical Systems and Signal Processing](https://www.journals.elsevier.com/mechanical-systems-and-signal-processing). Pls find the newest version there. 
+This module contains the code used in our survey paper: [Deep Learning and Its Applications to Machine Health Monitoring](https://www.researchgate.net/publication/311839720_Deep_Learning_and_Its_Applications_to_Machine_Health_Monitoring_A_Survey). It has been published in [Mechanical Systems and Signal Processing](https://linkinghub.elsevier.com/retrieve/pii/S0888327018303108). This version is [my edit](https://github.com/bagustrius) to keep the code run in Python 3.6 and Tensorflow 1.15.5.
 
 ## Table of Contents
 
@@ -21,7 +21,7 @@ This module contains the code used in our survey paper: [Deep Learning and Its A
 This folder contains two pickle files, which are extracted features and labels for tool wear sensing experiments. Each pickle file contain x_train, y_train, x_test, y_test. The task is defined as a regression problem.
 
 - data_normal: each data sample is a vector. The features are extracted from the whole time sequences. 
-- data_seq: each data sample is a tensor. The features are extracted from windows of the time time sequences. 
+- data_seq: each data sample is a tensor. The features are extracted from windows of the time sequences. 
 
 Especially, data_seq can be used by LSTM and CNN models. data_normal can be utilized by conventional ML models.
 
@@ -32,16 +32,18 @@ This folder contains codes for feature extraction, traditional machine learning 
 RMS, VAR, MAX, Peak, Skew, Kurt, Wavelet, Spectral Kurt, Spectral Skewness, Spectral Powder features are extracted from the input time series. 
 
 ### Deep Learning Models
-Based on Keras, autoencoder and its variants, implementations of DBN, LSTM, Bi-directional LSTM and CNN models are provided
+Based on Keras, autoencoder and its variants, implementations of LSTM, Bi-directional LSTM and CNN models are provided
 
 ### Traditioanl Machine Learning Models
-SVR with two kernels (linear and rbf), Random Forest and Neural Network are provided.
+SVR with two kernels (linear and rbf), Random Forest, and Neural Network are provided.
 
 ### Main Test
-To replicate the results reported in paper (python 2.7)
+To replicate the results reported in the paper (python 3.6)
 ```
 pip install -r requirement 
 python main_test.py
+python parselog.py
 ```
-The results will be stored in output.log. In addition, a python notebook file is provided to parse the raw log file for mean and std accuracies computing. And due to randomness, we run all of these models five times. 
+The results will be stored in output.log. In addition, a python notebook file is provided to parse the raw log file for mean and std accuracy computation. 
+Due to randomness, we run all of these models five times. 
 
