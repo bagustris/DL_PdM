@@ -19,6 +19,7 @@ seed(10132017)
 set_random_seed(18071991)
 
 log = "output.log"
+logging.FileHandler(filename=log, mode='w', encoding=None, delay=False)
 logging.basicConfig(filename=log, level=logging.DEBUG,
                     format='%(asctime)s %(message)s', datefmt='%d/%m/%Y %H:%M:%S')
 
