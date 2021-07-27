@@ -19,13 +19,18 @@ seed(10132017)
 set_random_seed(18071991)
 
 log = "output.log"
-logging.FileHandler(filename=log, mode='w', encoding=None, delay=False)
+
+# Remove all handlers associated with the root logger object.
+for handler in logging.root.handlers[:]:
+    logging.root.removeHandler(handler)
+
 logging.basicConfig(filename=log, level=logging.DEBUG,
-                    format='%(asctime)s %(message)s', datefmt='%d/%m/%Y %H:%M:%S')
+                    format='%(asctime)s %(message)s', 
+                    datefmt='%d/%m/%Y %H:%M:%S')
 
 
 if __name__ == '__main__':
-    for time in range(5):
+    for time in range(2):
         idx_test = 1
         logging.info("conducting exp.")
         t = load_data(True)
@@ -47,10 +52,10 @@ if __name__ == '__main__':
         logging.info("   rbf svr result: %f_%f" % (score, mae_score))
 
     	# random forest
-        NUM_ESTIMATOR = 50
-        NUM_PREEPOCH = 30
-        NUM_BPEPOCH = 30
-        BATCH_SIZE = 24
+        NUM_ESTIMATOR = 10          # default 50
+        NUM_PREEPOCH = 5           # 30
+        NUM_BPEPOCH = 5            # 30
+        BATCH_SIZE = 24             # 24
         rf = build_RF(NUM_ESTIMATOR)
         rf.fit(X_train, y_train)
         y_pred = rf.predict(X_test)
