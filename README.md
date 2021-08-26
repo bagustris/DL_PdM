@@ -25,6 +25,8 @@ This folder contains two pickle files, which are extracted features and labels f
 
 Especially, data_seq can be used by LSTM and CNN models. data_normal can be utilized by conventional ML models.
 
+These data are from PHM Society Challenge 2010.  
+
 ## Code
 This folder contains codes for feature extraction, traditional machine learning models, deep learning models and test modules. 
 
@@ -34,7 +36,7 @@ RMS, VAR, MAX, Peak, Skew, Kurt, Wavelet, Spectral Kurt, Spectral Skewness, Spec
 ### Deep Learning Models
 Based on Keras, autoencoder and its variants, implementations of LSTM, Bi-directional LSTM and CNN models are provided
 
-### Traditioanl Machine Learning Models
+### Traditional Machine Learning Models
 SVR with two kernels (linear and rbf), Random Forest, and Neural Network are provided.
 
 ### Main Test
