@@ -1,6 +1,6 @@
 # Deep Learning for Predictive Maintenance
 
-This module contains the code used in the paper: [Deep Learning and Its Applications to Machine Health Monitoring](https://www.researchgate.net/publication/311839720_Deep_Learning_and_Its_Applications_to_Machine_Health_Monitoring_A_Survey). It has been published in [Mechanical Systems and Signal Processing](https://linkinghub.elsevier.com/retrieve/pii/S0888327018303108). This version is [my fork](https://github.com/bagustrius) from the [original authors](https://github.com/ClockworkBunny/MHMS_DEEPLEARNING.) to keep the code run in Python 3.6 and Tensorflow 1.15.5.
+This module contains the code used in the paper: [Deep Learning and Its Applications to Machine Health Monitoring](https://www.researchgate.net/publication/311839720_Deep_Learning_and_Its_Applications_to_Machine_Health_Monitoring_A_Survey). It has been published in [Mechanical Systems and Signal Processing](https://linkinghub.elsevier.com/retrieve/pii/S0888327018303108). This version is [my fork](https://github.com/bagustris) from the [original authors](https://github.com/ClockworkBunny/MHMS_DEEPLEARNING.) to keep the code run in Python 3.6 and Tensorflow 1.15.5.
 
 ## Table of Contents
 
